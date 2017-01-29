@@ -1,0 +1,15 @@
+<form action="/chat-save" method="post" name="public-chat">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="name" placeholder="name" required /> <br />
+	<input type="text" name="chat_data" placeholder="message" required /> <br />
+  <input type="submit" value="post" />
+</form>
+<br />
+<% @chats.each do |chat| %>
+  <span>
+    <fieldset>
+      <%= chat.name %> : <%= chat.chat_data %>
+    </fieldset>
+  </span>
+  <br />
+<% end %>
