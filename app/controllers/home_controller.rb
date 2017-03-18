@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+    @videos_list = VideolistProcess.all
   end
   def chat
     @chats = Chat.order('id desc').last(100)
