@@ -4,6 +4,14 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+  resources :videos do
+    member do
+      get 'display'
+    end
+    collection do
+      get 'hidden_inn'
+    end
+  end
   root 'home#index'
   get 'chat' => 'home#chat'
   post 'chat-save' => 'home#chat_save'

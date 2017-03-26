@@ -1,0 +1,5 @@
+<h4> <%= @video.name %> </h4></br>
+  <video width="320" height="240" controls="controls" preload="preload">
+  <source src="/videos/<%= "#{@video.name}-#{@video.id}" %>" type="<%= @video.status %>">
+  </video>
+</br>

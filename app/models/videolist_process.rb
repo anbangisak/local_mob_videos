@@ -25,7 +25,8 @@ class VideolistProcess < ActiveRecord::Base
                 name: name,
                 message: path_details_hash[:type],
                 pid: pid_tmp_name,
-                status: path_details_hash[:content_type]
+                status: path_details_hash[:content_type],
+                hidden: path.include?("/.")
               }
             )
             File.symlink(path, pid_tmp_name)

@@ -1,0 +1,6 @@
+<% @videos_list.each do |video| %>
+  <a href='/videos/<%= "#{video.id}" %>/display'> <%= video.name %> </a></br>
+<% end %>
+
+</br>
+<%= link_to "home", root_url %>
